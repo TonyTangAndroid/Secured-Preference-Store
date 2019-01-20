@@ -688,8 +688,7 @@ public class EncryptionManager {
     void loadKey(SharedPreferences prefStore) throws KeyStoreException, UnrecoverableEntryException, NoSuchAlgorithmException, NoSuchPaddingException, NoSuchProviderException, InvalidKeyException, IOException {
         if (!isCompatMode) {
             if (mStore.containsAlias(AES_KEY_ALIAS) && mStore.entryInstanceOf(AES_KEY_ALIAS, KeyStore.SecretKeyEntry.class)) {
-                KeyStore.SecretKeyEntry entry = (KeyStore.SecretKeyEntry) mStore.getEntry(AES_KEY_ALIAS, null);
-                aesKey = entry.getSecretKey();
+                aesKey = (SecretKey) mStore.getKey(AES_KEY_ALIAS, null);
             }
         } else {
             aesKey = getFallbackAESKey(prefStore);
