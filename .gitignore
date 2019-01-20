@@ -4,21 +4,14 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff:
-.idea/**/workspace.xml
-.idea/misc.xml
-.idea/markdown-navigator
-.idea/copyright
-.idea/modules
-.idea/markdown-navigator.xml
-.idea/modules.xml
-
+.idea
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries
 
 # Gradle files
-.gradle/
-build/
+.gradle
+build
 
 # Local configuration file (sdk path, etc)
 local.properties
